@@ -9,8 +9,11 @@ And general noodling around
 #####
 
 GPS vin to RPI3 3.3v
+
 GPS ground to RPI3 ground
+
 GPS rx to RPI3 tx
+
 GPS tx to RPI3 rx
 
 #####
@@ -18,10 +21,15 @@ GPS tx to RPI3 rx
 #####
 
 sudo raspi-config
+
 select 5- interfacing options
+
 select P6- serial
+
 NO for login shell
+
 YES for serial port hardware
+
 reboot
 
 #####
@@ -43,6 +51,9 @@ sudo gpsd /dev/ttyS0 -F /var/run/gpsd.sock
 
 # Check for Data 
 (sometimes pointing it out the window or setting it on a porch with the antenna facing the sky is necessary)
+
+check for data with
+
 cgps -s
 
 #####
