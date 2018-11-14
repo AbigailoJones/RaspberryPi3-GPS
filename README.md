@@ -33,11 +33,13 @@ sudo apt-get install gpsd gpsd-clients
 
 # Fix systemd socket error in Jessie and later
 sudo systemctl stop gpsd.socket
+
 sudo systemctl disable gpsd.socket
 
 # Point gpsd to serial0  
 sudo killall gpsd
-sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
+
+sudo gpsd /dev/ttyS0 -F /var/run/gpsd.sock
 
 # Check for Data 
 (sometimes pointing it out the window or setting it on a porch with the antenna facing the sky is necessary)
