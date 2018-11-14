@@ -36,7 +36,7 @@ sudo systemctl stop gpsd.socket
 
 sudo systemctl disable gpsd.socket
 
-# Point gpsd to serial0  
+# Point gpsd to TTYS0  
 sudo killall gpsd
 
 sudo gpsd /dev/ttyS0 -F /var/run/gpsd.sock
